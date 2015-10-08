@@ -10,16 +10,15 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+    @IBOutlet private weak var widthLabel: UILabel!
+    @IBOutlet private weak var heightLabel: UILabel!
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        let screenBounds = UIScreen.mainScreen().bounds
+        widthLabel.text = String(format: "%.1f", arguments: [screenBounds.width])
+        heightLabel.text = String(format: "%.1f", arguments: [screenBounds.height])
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-
 }
 

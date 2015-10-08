@@ -18,8 +18,20 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="x" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="crq-1w-C8f">
-                                <rect key="frame" x="292.5" y="282" width="15" height="36"/>
+                                <rect key="frame" x="292" y="282" width="15" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1000" verticalHuggingPriority="251" text="width" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="84c-MK-UGp">
+                                <rect key="frame" x="279" y="261" width="42.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="height" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yWs-xR-Tne">
+                                <rect key="frame" x="276" y="318" width="48.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -50,13 +62,17 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="yWs-xR-Tne" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="A5P-40-uBg"/>
                             <constraint firstItem="crq-1w-C8f" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="AIz-fl-CJD"/>
                             <constraint firstItem="kg1-ec-12J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G6F-bG-xY7"/>
+                            <constraint firstItem="crq-1w-C8f" firstAttribute="top" secondItem="84c-MK-UGp" secondAttribute="bottom" id="GnX-KZ-T26"/>
                             <constraint firstItem="bGa-gx-ZwH" firstAttribute="top" secondItem="crq-1w-C8f" secondAttribute="bottom" constant="20" id="KKk-4O-iXK"/>
                             <constraint firstItem="crq-1w-C8f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="OGg-au-eRW"/>
                             <constraint firstItem="crq-1w-C8f" firstAttribute="top" secondItem="kg1-ec-12J" secondAttribute="bottom" constant="20" id="OpW-sE-w1q"/>
                             <constraint firstItem="HRY-NR-sYc" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="PVu-aF-yVY"/>
+                            <constraint firstItem="yWs-xR-Tne" firstAttribute="top" secondItem="crq-1w-C8f" secondAttribute="bottom" id="R40-ca-86N"/>
                             <constraint firstItem="wOz-cN-fDx" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Ufh-Xd-YmW"/>
+                            <constraint firstItem="84c-MK-UGp" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UxC-R4-sBr"/>
                             <constraint firstItem="kg1-ec-12J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="ZAo-s0-vbb"/>
                             <constraint firstItem="HRY-NR-sYc" firstAttribute="top" secondItem="crq-1w-C8f" secondAttribute="bottom" constant="20" id="bIB-0j-mJj"/>
                             <constraint firstItem="crq-1w-C8f" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="g8a-ib-2Ed"/>
@@ -138,6 +154,10 @@
                             </mask>
                         </variation>
                     </view>
+                    <connections>
+                        <outlet property="heightLabel" destination="yWs-xR-Tne" id="TH4-CT-utA"/>
+                        <outlet property="widthLabel" destination="84c-MK-UGp" id="GHM-ZJ-eAH"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
